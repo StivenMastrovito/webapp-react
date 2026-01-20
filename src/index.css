@@ -1,18 +1,118 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
-img{
+img {
     max-width: 100%;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
+}
+
+.active {
+    border-bottom: 1px solid blue;
+    color: blue;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.hero_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 0;
+}
+
+.btn_film {
+    padding: 8px 30px;
+    border: 0;
+    background-color: rgb(85, 85, 85);
+    font-size: 2vw;
+    font-weight: 700;
+    border-radius: 15px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    row-gap: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(85, 85, 85);
+    gap: 10px;
+    padding-bottom: 20px 0;
+    cursor: pointer;
+}
+
+.grid_column {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    gap: 20px;
+    align-items: center;
+}
+
+.card_column {
+    display: flex;
+    border: 1px solid rgb(85, 85, 85);
+}
+
+.grid_column img {
+    width: 30%;
+}
+
+.body_card {
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reviews {
+    width: 100%;
+    border: 1px solid gray;
+    display: flex;
+    flex-direction: column;
+    color: gray;
+    font-size: 1.4rem;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+.reviews_header {
+    display: flex;
+    justify-content: space-between;
+    color: gray;
+    font-size: 1.4rem;
+}
+
+.reviews_body {
+}
+
+.one_review{
+display: flex;
+    justify-content: space-between;
+    color: black;
 }
