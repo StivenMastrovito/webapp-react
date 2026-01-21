@@ -5,6 +5,7 @@ import DefaultLayout from './layouts/DefaultLayout'
 import Home from './pages/Home'
 import Films from './pages/Films'
 import FilmDetails from './pages/FilmDetails'
+import Search from './pages/Search'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/films" element={<Films /> } />
             <Route path={`/films/:id`} element={<FilmDetails /> } />
+            <Route path={`/search`} element={<Search /> } />
           </Route>
         </Routes>
       </BrowserRouter>

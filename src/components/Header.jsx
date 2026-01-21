@@ -10,6 +10,10 @@ const navLinks = [
         path: "/films",
         title: "Films"
     },
+    {
+        path: "/search",
+        title: "Cerca"
+    },
 ]
 
 export default function Header() {
