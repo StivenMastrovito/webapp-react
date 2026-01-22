@@ -186,7 +186,7 @@ display: flex;
     align-items: center;
 }
 
-.new_review{
+.form{
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -195,12 +195,12 @@ display: flex;
     border-radius: 10px;
 }
 
-.new_review .input{
+.form .input{
     display: flex;
     gap: 20px;
 }
 
-.new_review label{
+.form label{
     font-size: 2vw;
     font-weight: 700;
 }
@@ -212,7 +212,7 @@ display: flex;
     font-weight: 300;
     font-size: 2vw;
 } 
-.new_review .send{
+.form .send{
     border: 1px solid white;
     background-color: green;
     width: fit-content;
@@ -221,7 +221,7 @@ display: flex;
     font-size: 1.5vw;
 }
 
-.new_review .annulla{
+.form .annulla{
     border: 1px solid white;
     background-color: rgb(255, 247, 0);
     width: fit-content;

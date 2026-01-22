@@ -4,6 +4,7 @@ import GoBack from "../components/GoBack";
 import Card from "../components/Card";
 
 export default function Search() {
+    const baseUrl = import.meta.env.VITE_BASE_URL
     const [films, setFilms] = useState([]);
     const [page, setPage] = useState(1)
     const [totalPage, setTotalPage] = useState(null)
@@ -13,9 +14,7 @@ export default function Search() {
 
     useEffect(() => {
         if (count !== 0) {
-            axios.get(`http://localhost:3000/api/movies/search?page=${page}&filter=${searchFilter}`).then((resp) => {
-                setFilms(resp.data.result);
-            })
+            getFilms();
         }
 
     }, [page])
@@ -26,14 +25,19 @@ export default function Search() {
             setControFilter(true)
         } else {
             setControFilter(false)
-            axios.get(`http://localhost:3000/api/movies/search?page=${page}&filter=${searchFilter}`).then((resp) => {
-                setFilms(resp.data.result);
-                setTotalPage(resp.data.info.total_page)
-                setPage(1)
-                console.log(resp.data);
-                setCount(1)
-            })
+            getFilms();
+            setPage(1)
+
         }
+    }
+
+    function getFilms() {
+        axios.get(`${baseUrl}/api/movies/search?page=${page}&filter=${searchFilter}`).then((resp) => {
+            setFilms(resp.data.result);
+            setTotalPage(resp.data.info.total_page)
+            console.log(resp.data);
+            setCount(1)
+        })
     }
     return (
         <>
